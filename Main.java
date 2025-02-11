@@ -5,19 +5,23 @@ public class Main {
         System.out.println("数当てゲームを始めます");
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("1から10の間の数字を入力してください:");
         int answer = (int)(Math.random() * 10) + 1;
-        int num = scan.nextInt();
+        int num;
 
-        if (num < answer) {
-            System.out.println("もっと大きい値です。");
-        }
-        else if (num > answer) {
-            System.out.println("もっと小さい値です。");
-        }
-        else {
-            System.out.println("正解です！");
-        }
+        do {
+            System.out.print("1から10の間の数字を入力してください:");
+            num = scan.nextInt();
+
+            if (num < answer) {
+                System.out.println("もっと大きい値です。");
+            }
+            else if (num > answer) {
+                System.out.println("もっと小さい値です。");
+            }
+            else {
+                System.out.println("正解です！");
+            }
+        } while (num != answer);
 
         scan.close();
     }

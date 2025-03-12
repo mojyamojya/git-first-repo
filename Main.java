@@ -7,10 +7,12 @@ public class Main {
 
         int answer = (int)(Math.random() * 10) + 1;
         int num;
+        int attemps = 0;
 
         do {
             System.out.print("1から10の間の数字を入力してください:");
             num = scan.nextInt();
+            attemps++;
 
             if (num < answer) {
                 System.out.println("もっと大きい値です。");
@@ -20,6 +22,16 @@ public class Main {
             }
             else {
                 System.out.println("正解です！");
+                System.out.println(attemps + "回で正解しました！");
+                if (attemps <= 3) {
+                    System.out.println("素晴らしい！");
+                }
+                else if (attemps <= 5) {
+                    System.out.println("なかなかいい感じです！");
+                }
+                else {
+                    System.out.println("もう少し頑張りましょう！");
+                }
             }
         } while (num != answer);
 

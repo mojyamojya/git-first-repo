@@ -7,7 +7,7 @@ public class Main {
 
         int answer = (int)(Math.random() * 10) + 1;
         int num;
-        int attempts;
+        int attempts = 0;
 
         do {
             System.out.print("1から10の間の数字を入力してください:");
